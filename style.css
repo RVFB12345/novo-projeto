@@ -4,10 +4,11 @@ ul {
   padding: 0px;
 }
 body{
-    background: url("https://www.ifnmg.edu.br/arquivos/2016/salinas/Salinas/Guarita/Novo_Guarita_-_Salinas.jpg") no-repeat;
-    ;
+    /*background: url("https://www.ifnmg.edu.br/arquivos/2016/salinas/Salinas/Guarita/Novo_Guarita_-_Salinas.jpg") no-repeat;
+    ;*/
+    background: url("img-pc.jpg") no-repeat center;
     background-attachment: fixed;
-    background-size: 1370px;
+    background-size: cover;
 }
 a {
   color: white;
@@ -40,7 +41,7 @@ input{
 #login {
     text-align: center;
 }
-#user, #senha, .btn {
+#user, #senha, #btn {
     position: relative;
     left: 100px;
 }
@@ -76,6 +77,11 @@ input{
 }
 
 @media (max-width: 600px) {
+    body{
+        background: url("img-mobile.jpg") no-repeat;
+        background-attachment: fixed;
+        background-size: 700px;
+    }
   #menu {
     display: block;
     position: absolute;
