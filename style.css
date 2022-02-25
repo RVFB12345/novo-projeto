@@ -97,7 +97,7 @@ input{
     overflow-y: hidden;
   }
   #nav.active #menu {
-    height: 12vh;
+    height: 6.6rem;
     visibility: visible;
     overflow-y: auto;
   }
