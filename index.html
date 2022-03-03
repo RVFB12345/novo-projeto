@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InternOut</title>
+  <title>Menu Mobile</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-  <header id="header">
+<body id="body" onclick="toggleBody()">
+    <header id="header">
     <a id="logo" href="">InternOut</a>
     <nav id="nav">
-      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false" onclick="toggleMenu()">Menu
         <span id="hamburger"></span>
       </button>
       <ul id="menu" role="menu">
@@ -24,12 +24,14 @@
   </header>
     <section>
       <p id="login">Login</p>
-      <p id="user">Usuário:</p>
-      <input type="text">
-      <p id="senha">Senha:</p>
-      <input type="password" name="senha" id="senha1" required>
+      <br />
+      <input type="email" class="input-form">
+      <span class="focus-input" data-placeholder="E-mail:"></span>
+      <br /><br />
+      <input type="password" class="input-form">
+      <span class="focus-input" data-placeholder="Senha:"></span>
       <br> <br>
-      <button id="btn">Login</button>
+      <button id="btn-login">Login</button>
   </section>
   <script src="./script.js"></script>
 </body>
