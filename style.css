@@ -10,6 +10,11 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+#btn-header {
+  background: none;
+  color: none;
+  border: none;
+}
 a {
   color: white;
   text-decoration: none;
@@ -33,7 +38,7 @@ section{
 input{
     border-radius: 5px;
     border: 2px solid #228B22;
-    padding: 5px 10px;
+    padding: 0px 0px;
     position: relative;
     left: 100px;
     outline: none;
@@ -79,9 +84,9 @@ input{
 
 @media (max-width: 600px) {
     body{
-        background: url("img-mobile.jpg") no-repeat;
+        background: url(".jpg") no-repeat;
         background-attachment: fixed;
-        background-size: 700px;
+        background-size: 450px;
     }
   #menu {
     display: block;
@@ -144,22 +149,56 @@ input{
   section{
       width: 280px;
       height: 330px;
-      margin-top: 170px;
-      margin:auto ;
+      margin: auto;
+      padding: 0 8px;
       position: relative;
       top: 170px;
   }
-  input{
+  .input-form{
+    display: block;
+    width: 230px;
     position: relative;
-    left: 30px;
+    left: 10px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #A9A9A9;
 }
-
-#user, #senha, #btn {
-    position: relative;
-    left: 30px;
+.focus-input::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -2px;
+  left: 125px;
+  width: 0px;
+  height: 2px;
+  background-color: #228B22;
+  transition: all .4s;
+}
+.input-form:focus + .focus-input::before {
+  width: 230px;
+  position: relative;
+  left: 10px;
+}
+.focus-input::after {
+  content: attr(data-placeholder);
+  font-family: Poppins-Medium;
+  font-size: 18px;
+  color: #A9A9A9;
+  line-height: 1.2;
+  width: 100%;
+  position: relative;
+  top: -25px;
+  left: 5px;
+  padding: 5px;
+  transition: all .4s;
+}
+.input-form:focus + .focus-input::after {
+  color: #228B22;
+  top: -40px;
+  font-size: 12px;
 }
 }
-#btn {
+#btn-login {
   padding: 10px 15px;
   color: white;
   background-color: #228B22;
