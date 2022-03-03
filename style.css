@@ -35,20 +35,8 @@ section{
     border-radius: 15px;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
-input{
-    border-radius: 5px;
-    border: 2px solid #228B22;
-    padding: 0px 0px;
-    position: relative;
-    left: 100px;
-    outline: none;
-}
 #login {
     text-align: center;
-}
-#user, #senha, #btn {
-    position: relative;
-    left: 100px;
 }
 
 #logo {
@@ -81,7 +69,50 @@ input{
 #btn-mobile {
   display: none;
 }
-
+.input-form{
+    display: block;
+    width: 280px;
+    position: relative;
+    left: 10px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #A9A9A9;
+    outline: none;
+}
+.focus-input::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -2px;
+  left: 150px;
+  width: 0px;
+  height: 2px;
+  background-color: #228B22;
+  transition: all .4s;
+}
+.input-form:focus + .focus-input::before {
+  width: 285px;
+  position: relative;
+  left: 10px;
+}
+.focus-input::after {
+  content: attr(data-placeholder);
+  font-family: Poppins-Medium;
+  font-size: 18px;
+  color: #A9A9A9;
+  line-height: 1.2;
+  width: 100%;
+  position: relative;
+  top: -25px;
+  left: 5px;
+  padding: 5px;
+  transition: all .4s;
+}
+.input-form:focus + .focus-input::after {
+  color: #228B22;
+  top: -40px;
+  font-size: 12px;
+}
 @media (max-width: 600px) {
     body{
         background: url(".jpg") no-repeat;
