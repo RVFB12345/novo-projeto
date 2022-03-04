@@ -22,3 +22,14 @@ function toggleBody() {
   const active = nav.classList.contains('active');
 }
 btnBody.addEventListener('click', toggleBody);
+
+const inputs = document.getElementsByClassName("input-form");
+for(const input of inputs) {
+    input.addEventListener("blur", function(){
+        if(input.value.trim() != ""){
+            input.classList.add("has-val");
+        } else {
+            input.classList.remove("has-val");
+        }
+    });
+}
