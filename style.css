@@ -95,6 +95,11 @@ section{
   position: relative;
   left: 10px;
 }
+.has-val.input-form + .focus-input::before {
+    width: 285px;
+    position: relative;
+    left: 10px;
+  }
 .focus-input::after {
   content: attr(data-placeholder);
   font-family: Poppins-Medium;
@@ -113,6 +118,11 @@ section{
   top: -40px;
   font-size: 12px;
 }
+.has-val.input-form + .focus-input::after {
+    color: #228B22;
+    top: -40px;
+    font-size: 12px;
+  }
 @media (max-width: 600px) {
     body{
         background: url(".jpg") no-repeat;
@@ -206,10 +216,15 @@ section{
   transition: all .4s;
 }
 .input-form:focus + .focus-input::before {
-  width: 230px;
+  width: 235px;
   position: relative;
   left: 10px;
 }
+.has-val.input-form + .focus-input::before {
+    width: 235px;
+    position: relative;
+    left: 10px;
+  }
 .focus-input::after {
   content: attr(data-placeholder);
   font-family: Poppins-Medium;
